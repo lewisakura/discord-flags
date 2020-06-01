@@ -1,6 +1,6 @@
 ---
 name: Flag Submission
-description: Did you capture a flag? Submit it here!
+about: Did you capture a flag? Submit it here!
 title: "Flag Caught: [NAME]"
 labels: flag
 ---
