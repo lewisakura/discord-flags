@@ -45,6 +45,11 @@ const flags = {
         description: 'Account is a Team account.',
         number: 1 << 10
     },
+    ONE_ELEVEN: {
+        description: 'Unknown flag. <a href="https://github.com/LewisTehMinerz/discord-flags/issues/1">Join the hunt!</a>',
+        number: 1 << 11,
+        undocumented: true
+    },
     SYSTEM: {
         description: 'Account is a Discord system account.',
         number: 1 << 12
