@@ -41,7 +41,7 @@ const flags = {
         description: 'User is an <a href="https://support.discord.com/hc/en-us/articles/360017949691-Grandfathered-Nitro-Classic-FAQ">Early Supporter</a>.',
         number: 1 << 9
     },
-    TEAM_USER: {
+    TEAM_PSEUDO_USER: {
         description: 'Account is a Team account.',
         number: 1 << 10
     },
