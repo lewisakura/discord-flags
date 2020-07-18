@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="img/favicon.svg" width="90">
+    <img src="img/dflags.svg" width="90">
     <h1 align="center">Discord Flags</h1>
     <h3 align="center">Document the undocumented.</h3>
 </p>
