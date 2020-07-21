@@ -45,8 +45,8 @@ const flags = {
         description: 'Account is a Team account.',
         number: 1 << 10
     },
-    ONE_ELEVEN: {
-        description: 'Unknown flag. <a href="https://github.com/LewisTehMinerz/discord-flags/issues/1">Join the hunt!</a>',
+    INTERNAL_APPLICATION: {
+        description: 'An internal flag accidentally leaked to the client\'s private flags. <a href="https://cdn.discordapp.com/attachments/734022007771103237/734699443818987570/Screenshot_20200720-101245.jpg2>Relates to partner/verification applications</a> but nothing else is known.',
         number: 1 << 11,
         undocumented: true
     },
