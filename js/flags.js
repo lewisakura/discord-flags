@@ -46,7 +46,7 @@ const flags = {
         number: 1 << 10
     },
     PARTNER_ELIGIBILITY: {
-        description: 'An internal flag accidentally leaked to the client\'s private flags. <a href="https://cdn.discordapp.com/attachments/734022007771103237/734699443818987570/Screenshot_20200720-101245.jpg">Identifies whether a user is a part of the Partner Eligibility program.',
+        description: 'An internal flag accidentally leaked to the client\'s private flags. <a href="https://cdn.discordapp.com/attachments/734022007771103237/734699443818987570/Screenshot_20200720-101245.jpg">Identifies whether a user is a part of the Partner Eligibility program.</a>',
         number: 1 << 11,
         undocumented: true
     },
