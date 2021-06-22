@@ -74,6 +74,10 @@ const flags = {
     VERIFIED_BOT_DEVELOPER: {
         description: 'User is a verified bot developer.',
         number: 1 << 17
+    },
+    CERTIFIED_MODERATOR: {
+        description: 'User is a Discord certified moderator.',
+        number: 1 << 18
     }
 };
 
