@@ -78,6 +78,14 @@ const flags = {
     CERTIFIED_MODERATOR: {
         description: 'User is a Discord certified moderator.',
         number: 1 << 18
+    },
+    BOT_HTTP_INTERACTIONS: {
+        description: 'User is a HTTP interactions bot (hides status icon).',
+        number: 1 << 19
+    },
+    SPAMMER: {
+        description: 'User is a spammer and their account was banned by Discord\'s Trust and Safety team.',
+        number: 1 << 20
     }
 };
 
