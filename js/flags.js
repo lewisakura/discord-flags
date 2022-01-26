@@ -217,7 +217,7 @@ for (let i = 0; i <= flagsGoUpTo; i++) {
         undocumented: true
     });
 
-    seenFlags.push(shift);
+    seenFlags.push(i);
 }
 
 document.getElementById('flagForm').addEventListener('submit', calculate);
