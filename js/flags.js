@@ -92,8 +92,8 @@ const flags = {
         number: 1n << 20n,
         undocumented: true
     },
-    MODERATED: {
-        description: 'User has been issued a moderation action by Trust and Safety in the past.',
+    UNKNOWN_FLAG_37: {
+        description: 'Unknown, but occurs with 39, 40, and 43.',
         number: 1n << 37n,
         undocumented: true
     },
@@ -102,9 +102,24 @@ const flags = {
         number: 1n << 38n,
         undocumented: true
     },
+    UNKNOWN_FLAG_39: {
+        description: 'Unknown, occurs with 37.',
+        number: 1n << 39n,
+        undocumented: true
+    },
     DISABLED: {
         description: 'User is currently temporarily or permanently disabled.',
         number: 1n << 41n,
+        undocumented: true
+    },
+    UNKNOWN_FLAG_40: {
+        description: 'Unknown, occurs with 37.',
+        number: 1n << 40n,
+        undocumented: true
+    },
+    UNKNOWN_FLAG_43: {
+        description: 'Unknown, occurs with 37.',
+        number: 1n << 43n,
         undocumented: true
     }
 };
