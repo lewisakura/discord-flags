@@ -91,7 +91,7 @@ const flags = {
         undocumented: true
     },
     SELFBOT: {
-        description: 'User is marked as a selfbot.',
+        description: 'User is marked as a selfbot. This is currently an assumption and is not confirmed.',
         number: 1n << 38n,
         undocumented: true
     }
