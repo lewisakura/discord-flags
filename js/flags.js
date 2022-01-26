@@ -1,99 +1,104 @@
 const flags = {
     DISCORD_EMPLOYEE: {
         description: 'User is a Discord employee.',
-        number: 1 << 0
+        number: 1n << 0n
     },
     DISCORD_PARTNER: {
         description: 'User is a Discord partner.',
-        number: 1 << 1
+        number: 1n << 1n
     },
     HYPESQUAD_EVENTS: {
         description: 'User is a HypeSquad Events member.',
-        number: 1 << 2
+        number: 1n << 2n
     },
     BUG_HUNTER_LEVEL_1: {
         description: 'User is a Bug Hunter.',
-        number: 1 << 3
+        number: 1n << 3n
     },
     MFA_SMS: {
         description: 'User has SMS 2FA enabled.',
-        number: 1 << 4,
+        number: 1n << 4n,
         undocumented: true
     },
     PREMIUM_PROMO_DISMISSED: {
         description: 'Unknown. Presumably some sort of Discord Nitro promotion that the user dismissed.',
-        number: 1 << 5,
+        number: 1n << 5n,
         undocumented: true
     },
     HOUSE_BRAVERY: {
         description: 'User is part of HypeSquad Bravery.',
-        number: 1 << 6
+        number: 1n << 6n
     },
     HOUSE_BRILLIANCE: {
         description: 'User is part of HypeSquad Brilliance.',
-        number: 1 << 7
+        number: 1n << 7n
     },
     HOUSE_BALANCE: {
         description: 'User is a part of HypeSquad Balance.',
-        number: 1 << 8
+        number: 1n << 8n
     },
     EARLY_SUPPORTER: {
         description: 'User is an <a href="https://support.discord.com/hc/en-us/articles/360017949691-Grandfathered-Nitro-Classic-FAQ">Early Supporter</a>.',
-        number: 1 << 9
+        number: 1n << 9n
     },
     TEAM_PSEUDO_USER: {
         description: 'Account is a Team account.',
-        number: 1 << 10
+        number: 1n << 10n
     },
     INTERNAL_APPLICATION: {
         description: 'An internal flag accidentally leaked to the client\'s private flags. <a href="https://cdn.discordapp.com/attachments/734022007771103237/734699443818987570/Screenshot_20200720-101245.jpg">Relates to partner/verification applications</a> but nothing else is known.',
-        number: 1 << 11,
+        number: 1n << 11n,
         undocumented: true
     },
     SYSTEM: {
         description: 'Account is a Discord system account.',
-        number: 1 << 12
+        number: 1n << 12n
     },
     HAS_UNREAD_URGENT_MESSAGES: {
         description: 'User has unread messages from Discord.',
-        number: 1 << 13
+        number: 1n << 13n
     },
     BUG_HUNTER_LEVEL_2: {
         description: 'User has the gold Bug Hunter badge.',
-        number: 1 << 14
+        number: 1n << 14n
     },
     UNDERAGE_DELETED: {
         description: 'Unused. User was deleted for being underage.',
-        number: 1 << 15,
+        number: 1n << 15n,
         undocumented: true
     },
     VERIFIED_BOT: {
         description: 'User is a verified bot.',
-        number: 1 << 16
+        number: 1n << 16n
     },
     VERIFIED_BOT_DEVELOPER: {
         description: 'User is a verified bot developer.',
-        number: 1 << 17
+        number: 1n << 17n
     },
     CERTIFIED_MODERATOR: {
         description: 'User is a Discord certified moderator.',
-        number: 1 << 18
+        number: 1n << 18n
     },
     BOT_HTTP_INTERACTIONS: {
         description: 'Bot is an HTTP interaction.',
-        number: 1 << 19
+        number: 1n << 19n
     },
     SPAMMER: {
         description: 'User is marked as a spammer.',
-        number: 1 << 20
+        number: 1n << 20n
+    },
+    SELFBOT: {
+        description: 'User is marked as a selfbot.',
+        number: 1n << 38n,
+        undocumented: true
     }
 };
 
 function _checkFlags(flagNumber) {
     let results = [];
 
-    for (let i = 0; i <= 30; i++) {
-        const bitwise = (1 << i);
+    for (let i = 0n; i <= 64n; i++) {
+        const bitwise = (1n << i);
 
         if (flagNumber & bitwise) {
             const flag = _getKeyByValue(flags, bitwise) || `UNKNOWN_FLAG_${i}`;
@@ -109,7 +114,12 @@ function _getKeyByValue(object, value) {
 }
 
 function _getShiftValue(flag) {
-    return ((Math.log10(flag & -flag)) / Math.log10(2));
+    let shifted = 0;
+    while (flag > 0n) {
+        flag = flag >> 1n;
+        shifted++;
+    }
+    return shifted - 1;
 }
 
 function calculate(e) {
@@ -118,10 +128,13 @@ function calculate(e) {
     const result = document.getElementById('result');
     result.innerHTML = 'N/A';
 
-    const flagNum = parseInt(document.getElementById('flags').value);
-
-    if (isNaN(flagNum)) {
-        result.innerHTML = 'Bad flag number (NaN)';
+    let flagNum;
+    
+    try {
+        flagNum = BigInt(document.getElementById('flags').value);
+    } catch (e) {
+        result.innerHTML = 'Bad flag number';
+        console.warn(e);
         return;
     }
 
