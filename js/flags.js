@@ -92,14 +92,19 @@ const flags = {
         number: 1n << 20n,
         undocumented: true
     },
-    UNSUSPENDED: {
-        description: 'User was disabled and reenabled by Trust and Safety.',
-        number: 1n << 32n,
+    MODERATED: {
+        description: 'User has been issued a moderation action by Trust and Safety in the past.',
+        number: 1n << 37n,
         undocumented: true
     },
     SELFBOT: {
         description: 'User is marked as a selfbot. This is currently an assumption and is not confirmed.',
         number: 1n << 38n,
+        undocumented: true
+    },
+    DISABLED: {
+        description: 'User is currently temporarily or permanently disabled.',
+        number: 1n << 41n,
         undocumented: true
     }
 };
