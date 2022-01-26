@@ -38,7 +38,8 @@ const flags = {
         number: 1n << 8n
     },
     EARLY_SUPPORTER: {
-        description: 'User is an <a href="https://support.discord.com/hc/en-us/articles/360017949691-Grandfathered-Nitro-Classic-FAQ">Early Supporter</a>.',
+        description:
+            'User is an <a href="https://support.discord.com/hc/en-us/articles/360017949691-Grandfathered-Nitro-Classic-FAQ">Early Supporter</a>.',
         number: 1n << 9n
     },
     TEAM_PSEUDO_USER: {
@@ -46,7 +47,8 @@ const flags = {
         number: 1n << 10n
     },
     INTERNAL_APPLICATION: {
-        description: 'An internal flag accidentally leaked to the client\'s private flags. <a href="https://cdn.discordapp.com/attachments/734022007771103237/734699443818987570/Screenshot_20200720-101245.jpg">Relates to partner/verification applications</a> but nothing else is known.',
+        description:
+            'An internal flag accidentally leaked to the client\'s private flags. <a href="https://cdn.discordapp.com/attachments/734022007771103237/734699443818987570/Screenshot_20200720-101245.jpg">Relates to partner/verification applications</a> but nothing else is known.',
         number: 1n << 11n,
         undocumented: true
     },
@@ -99,7 +101,7 @@ function _checkFlags(flagNumber) {
     let results = [];
 
     for (let i = 0n; i <= 64n; i++) {
-        const bitwise = (1n << i);
+        const bitwise = 1n << i;
 
         if (flagNumber & bitwise) {
             const flag = _getKeyByValue(flags, bitwise) || `UNKNOWN_FLAG_${i}`;
@@ -130,7 +132,7 @@ function calculate(e) {
     result.innerHTML = 'N/A';
 
     let flagNum;
-    
+
     try {
         flagNum = BigInt(document.getElementById('flags').value);
     } catch (e) {
@@ -150,32 +152,81 @@ const undocumented = `<span class="icon">
 </span>`;
 
 const table = document.getElementById('knownFlags');
-for (const flag of Object.keys(flags)) {
-    const value = flags[flag].number;
+const flagsGoUpTo = 43;
+const seenFlags = [];
 
+function insertFlag(flag, flagData) {
     const row = table.insertRow(-1);
     const flagName = row.insertCell(0);
     const flagValue = row.insertCell(1);
     const flagDesc = row.insertCell(2);
 
-    const bitshift = `(1 << ${_getShiftValue(value)})`;
-
     flagName.innerHTML = flag;
 
-    if (flags[flag].undocumented)
-        flagName.innerHTML += undocumented;
+    if (flagData.undocumented) flagName.innerHTML += undocumented;
 
-    flagValue.innerHTML = `${value} ${bitshift}`;
-    flagDesc.innerHTML = flags[flag].description;
+    flagValue.innerHTML = `${flagData.value} (1 << ${flagData.bitshift})`;
+    flagDesc.innerHTML = flagData.description;
+}
+
+for (const flag of Object.keys(flags)) {
+    const value = flags[flag].number;
+    const shift = _getShiftValue(value);
+
+    // if a flag is missing...
+    if (shift > 0 && !seenFlags.includes(shift - 1)) {
+        // loop over until we hit a seen flag
+        let missingFlagStart = shift;
+        do {
+            missingFlagStart--;
+        } while (!seenFlags.includes(missingFlagStart));
+        missingFlagStart++; // because the loop ends when we hit a seen flag
+
+        // now add all the missing flags with placeholder data
+        for (let i = missingFlagStart; i < shift; i++) {
+            insertFlag(`UNKNOWN_FLAG_${i}`, {
+                description:
+                    'This flag is currently not known but is potentially used. If you have information about this flag, submit your information at the bottom of the page!',
+                bitshift: i,
+                value: 1n << BigInt(i),
+                undocumented: true
+            });
+
+            seenFlags.push(i);
+        }
+    }
+
+    insertFlag(flag, {
+        description: flags[flag].description,
+        bitshift: shift,
+        value: value,
+        undocumented: flags[flag].undocumented
+    });
+
+    seenFlags.push(shift);
+}
+
+for (let i = 0; i <= flagsGoUpTo; i++) {
+    if (seenFlags.includes(i)) continue;
+
+    insertFlag(`UNKNOWN_FLAG_${i}`, {
+        description:
+            'This flag is currently not known but is potentially used. If you have information about this flag, submit your information at the bottom of the page!',
+        bitshift: i,
+        value: 1n << BigInt(i),
+        undocumented: true
+    });
+
+    seenFlags.push(shift);
 }
 
 document.getElementById('flagForm').addEventListener('submit', calculate);
 
-document.getElementById('helpLink').addEventListener('click', (e) => {
+document.getElementById('helpLink').addEventListener('click', e => {
     e.preventDefault();
     document.getElementById('helpModal').classList.add('is-active');
 });
-document.getElementById('closeHelpModal').addEventListener('click', (e) => {
+document.getElementById('closeHelpModal').addEventListener('click', e => {
     e.preventDefault();
     document.getElementById('helpModal').classList.remove('is-active');
 });
