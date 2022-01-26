@@ -54,11 +54,13 @@ const flags = {
     },
     SYSTEM: {
         description: 'Account is a Discord system account.',
-        number: 1n << 12n
+        number: 1n << 12n,
+        undocumented: true
     },
     HAS_UNREAD_URGENT_MESSAGES: {
         description: 'User has unread messages from Discord.',
-        number: 1n << 13n
+        number: 1n << 13n,
+        undocumented: true
     },
     BUG_HUNTER_LEVEL_2: {
         description: 'User has the gold Bug Hunter badge.',
@@ -88,6 +90,11 @@ const flags = {
     SPAMMER: {
         description: 'User is marked as a spammer.',
         number: 1n << 20n,
+        undocumented: true
+    },
+    UNSUSPENDED: {
+        description: 'User was disabled and reenabled by Trust and Safety.',
+        number: 1n << 32n,
         undocumented: true
     },
     SELFBOT: {
