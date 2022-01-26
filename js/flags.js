@@ -85,7 +85,8 @@ const flags = {
     },
     SPAMMER: {
         description: 'User is marked as a spammer.',
-        number: 1n << 20n
+        number: 1n << 20n,
+        undocumented: true
     },
     SELFBOT: {
         description: 'User is marked as a selfbot.',
