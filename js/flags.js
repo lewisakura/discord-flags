@@ -92,8 +92,8 @@ const flags = {
         number: 1n << 20n,
         undocumented: true
     },
-    UNKNOWN_FLAG_37: {
-        description: 'Unknown, but occurs with 39, 40, and 43.',
+    PREVIOUSLY_DISABLED: {
+        description: 'User has been previously disabled by TnS. This is currently an assumption and is not confirmed.',
         number: 1n << 37n,
         undocumented: true
     },
