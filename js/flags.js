@@ -107,14 +107,14 @@ const flags = {
         number: 1n << 39n,
         undocumented: true
     },
-    DISABLED: {
-        description: 'User is currently temporarily or permanently disabled.',
-        number: 1n << 41n,
-        undocumented: true
-    },
     UNKNOWN_FLAG_40: {
         description: 'Unknown, occurs with 37.',
         number: 1n << 40n,
+        undocumented: true
+    },
+    DISABLED: {
+        description: 'User is currently temporarily or permanently disabled.',
+        number: 1n << 41n,
         undocumented: true
     },
     UNKNOWN_FLAG_43: {
