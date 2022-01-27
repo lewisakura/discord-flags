@@ -92,7 +92,7 @@ const flags = {
         number: 1n << 20n,
         undocumented: true
     },
-    PREVIOUSLY_DISABLED: {
+    PREVIOUSLY_DISABLED_BY_TNS: {
         description: 'User has been previously disabled by TnS. This is currently an assumption and is not confirmed.',
         number: 1n << 37n,
         undocumented: true
