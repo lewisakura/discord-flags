@@ -1,106 +1,117 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Flags</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Discord Flags</title>
 
-    <meta name="og:title" content="Discord Flags">
-    <meta name="og:description" content="Document the undocumented.">
-    <meta name="og:site_name" content="Discord Flags">
+        <meta name="og:title" content="Discord Flags" />
+        <meta name="og:description" content="Document the undocumented." />
+        <meta name="og:site_name" content="Discord Flags" />
 
-    <link rel="stylesheet" href="css/bulma-material.min.css">
-    <link rel="stylesheet" href="css/bulma-tooltip.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/solid.min.css">
-    <style>
-        /* fixes bug where icon is just inside text */
-        .button .icon:first-child:last-child {
-            margin-right: 0;
-        }
-        /* removes the ugly stuff that comes from using tooltips */
-        .fa-stack[data-tooltip] {
-            border-bottom: none !important;
-            cursor: default !important;
-        }
-    </style>
-    <link rel="icon" href="img/favicon.svg">
-</head>
-<body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title"><i class="fas fa-flag"></i> Discord Flags</h1>
-            <h2 class="subtitle">Document the undocumented.</h2>
+        <link rel="stylesheet" href="css/bulma-material.min.css" />
+        <link rel="stylesheet" href="css/bulma-tooltip.min.css" />
+        <link rel="stylesheet" href="css/fontawesome.min.css" />
+        <link rel="stylesheet" href="css/solid.min.css" />
+        <style>
+            /* fixes bug where icon is just inside text */
+            .button .icon:first-child:last-child {
+                margin-right: 0;
+            }
+            /* removes the ugly stuff that comes from using tooltips */
+            .fa-stack[data-tooltip] {
+                border-bottom: none !important;
+                cursor: default !important;
+            }
+        </style>
+        <link rel="icon" href="img/favicon.svg" />
+    </head>
+    <body>
+        <section class="section">
+            <div class="container">
+                <h1 class="title"><i class="fas fa-flag"></i> Discord Flags</h1>
+                <h2 class="subtitle">Document the undocumented.</h2>
 
-            <div class="columns">
-                <div class="column is-two-thirds">
-                    <h2 class="subtitle">Known Flags</h2>
-                    <table id="knownFlags" class="table">
-                        <tr>
-                            <th>Name</th>
-                            <th>Number</th>
-                            <th>Description</th>
-                        </tr>
-                    </table>
-                </div>
-                <div class="column">
-                    <h2 class="subtitle">Check Flags</h2>
-                    <form id="flagForm">
+                <div class="columns">
+                    <div class="column is-two-thirds">
+                        <h2 class="subtitle">Known Flags</h2>
+                        <table id="knownFlags" class="table">
+                            <tr>
+                                <th>Name</th>
+                                <th>Number</th>
+                                <th>Description</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <h2 class="subtitle">Check Flags</h2>
+                        <form id="flagForm">
+                            <div class="field">
+                                <label class="label"
+                                    >Flag Number <a href="#" id="helpLink"><i class="fas fa-question-circle"></i></a
+                                ></label>
+                                <div class="control">
+                                    <input class="input" type="number" id="flags" />
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <input class="button" type="submit" value="Get Flags" />
+                            </div>
+                        </form>
                         <div class="field">
-                            <label class="label">Flag Number <a href="#" id="helpLink"><i class="fas fa-question-circle"></i></a></label>
+                            <label class="label">Result</label>
                             <div class="control">
-                                <input class="input" type="number" id="flags">
+                                <span id="result">N/A</span>
                             </div>
                         </div>
-
-                        <div class="field">
-                            <input class="button" type="submit" value="Get Flags">
-                        </div>
-                    </form>
-                    <div class="field">
-                        <label class="label">Result</label>
-                        <div class="control">
-                            <span id="result">N/A</span>
-                        </div>
+                        <p>
+                            We're currently performing research into flags. If possible, please
+                            <a href="https://forms.gle/FsdMerqjayMuziRdA">submit this form</a> so we can gather more
+                            information. It'll help improve the site for everyone!
+                        </p>
                     </div>
-                    <p>
-                        We're currently performing research into flags. If possible, please <a href="https://forms.gle/FsdMerqjayMuziRdA">submit this form</a> so we can gather more information. It'll help improve the site for everyone!
-                    </p>
                 </div>
+                <i
+                    ><span data-tooltip="Found">Captured</span> a flag?
+                    <a
+                        href="https://github.com/LewisTehMinerz/discord-flags/issues/new?labels=flag&template=flag-submission.md&title=Flag+Caught%3A+%5BNAME%5D"
+                        >Submit it!</a
+                    ></i
+                >
             </div>
-            <i><span data-tooltip="Found">Captured</span> a flag? <a
-                    href="https://github.com/LewisTehMinerz/discord-flags/issues/new?labels=flag&template=flag-submission.md&title=Flag+Caught%3A+%5BNAME%5D">Submit
-                    it!</a></i>
-        </div>
-    </section>
+        </section>
 
-    <div class="modal" id="helpModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">How do I get flags?</p>
-                <button class="delete" id="closeHelpModal"></button>
-            </header>
-            <section class="modal-card-body">
-                <p>
-                    <i>Click on any image for higher quality.</i>
-                    <li>Open Discord DevTools</li>
-                    <a href="img/guide-1.png" target="_blank"><img src="img/guide-1.png"></a>
-                    <li>Go to network</li>
-                    <a href="img/guide-2.png" target="_blank"><img src="img/guide-2.png"></a>
-                    <li>In Discord, click on anyone and open their profile</li>
-                    <a href="img/guide-3.png" target="_blank"><img src="img/guide-3.png"></a>
-                    <li>In DevTools, look for "profile"</li>
-                    <a href="img/guide-4.png" target="_blank"><img src="img/guide-4.png"></a>
-                    <li>Click on it and go to the "Preview" tab and look for "user"</li>
-                    <a href="img/guide-5.png" target="_blank"><img src="img/guide-5.png"></a>
-                    <i>Note: None of this information is sensitive, I only blurred it out because it is not relevant.</i>
-                    <li>Expand "user" and you will find "flags", those are the flags</li>
-                    <a href="img/guide-6.png" target="_blank"><img src="img/guide-6.png"></a>
-                </p>
-            </section>
+        <div class="modal" id="helpModal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">How do I get flags?</p>
+                    <button class="delete" id="closeHelpModal"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>
+                        <i>Click on any image for higher quality.</i>
+                        <li>Open Discord DevTools</li>
+                        <a href="img/guide-1.png" target="_blank"><img src="img/guide-1.png" /></a>
+                        <li>Go to network</li>
+                        <a href="img/guide-2.png" target="_blank"><img src="img/guide-2.png" /></a>
+                        <li>In Discord, click on anyone and open their profile</li>
+                        <a href="img/guide-3.png" target="_blank"><img src="img/guide-3.png" /></a>
+                        <li>In DevTools, look for "profile"</li>
+                        <a href="img/guide-4.png" target="_blank"><img src="img/guide-4.png" /></a>
+                        <li>Click on it and go to the "Preview" tab and look for "user"</li>
+                        <a href="img/guide-5.png" target="_blank"><img src="img/guide-5.png" /></a>
+                        <i
+                            >Note: None of this information is sensitive, I only blurred it out because it is not
+                            relevant.</i
+                        >
+                        <li>Expand "user" and you will find "flags", those are the flags</li>
+                        <a href="img/guide-6.png" target="_blank"><img src="img/guide-6.png" /></a>
+                    </p>
+                </section>
+            </div>
         </div>
-    </div>
 
-    <script src="js/flags.js"></script>
-</body>
+        <script src="js/flags.js"></script>
+    </body>
 </html>
