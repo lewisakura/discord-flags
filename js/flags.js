@@ -123,6 +123,7 @@ const flags = {
         undocumented: true
     }
 };
+const misc = 'This flag is currently not known but is potentially used. If you have information about this flag, submit your information at the bottom of the page!';
 
 function _checkFlags(flagNumber) {
     let results = [];
@@ -212,8 +213,7 @@ for (const flag of Object.keys(flags)) {
         // now add all the missing flags with placeholder data
         for (let i = missingFlagStart; i < shift; i++) {
             insertFlag(`UNKNOWN_FLAG_${i}`, {
-                description:
-                    'This flag is currently not known but is potentially used. If you have information about this flag, submit your information at the bottom of the page!',
+                description: misc,
                 bitshift: i,
                 value: 1n << BigInt(i),
                 undocumented: true
@@ -237,8 +237,7 @@ for (let i = 0; i <= flagsGoUpTo; i++) {
     if (seenFlags.includes(i)) continue;
 
     insertFlag(`UNKNOWN_FLAG_${i}`, {
-        description:
-            'This flag is currently not known but is potentially used. If you have information about this flag, submit your information at the bottom of the page!',
+        description: misc,
         bitshift: i,
         value: 1n << BigInt(i),
         undocumented: true
