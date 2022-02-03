@@ -92,6 +92,11 @@ const flags = {
         number: 1n << 20n,
         undocumented: true
     },
+    DISABLE_PREMIUM: {
+        description: 'Unknown, possibly a flag for disabling Discord Nitro features.',
+        number: 1n << 21n,
+        undocumented: true
+    },
     UNKNOWN_FLAG_37: {
         description: 'Unknown, but occurs with 39, 40, and 43.',
         number: 1n << 37n,
