@@ -96,7 +96,7 @@ const flags = {
         description: 'User has a premium discriminator',
         number: 1n << 37n,
         undocumented: true
-        },
+    },
     UNKNOWN_FLAG_38: {
         description: 'User has used the desktop client',
         number: 1n << 38n,
