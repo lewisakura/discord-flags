@@ -92,22 +92,22 @@ const flags = {
         number: 1n << 20n,
         undocumented: true
     },
-    UNKNOWN_FLAG_37: {
+    PREMIUM_DISCRIMINATOR: {
         description: 'User has a premium discriminator',
         number: 1n << 37n,
         undocumented: true
     },
-    UNKNOWN_FLAG_38: {
+    USED_DESKTOP_CLIENT: {
         description: 'User has used the desktop client',
         number: 1n << 38n,
         undocumented: true
     },
-    UNKNOWN_FLAG_39: {
+    USED_WEB_CLIENT: {
         description: 'User has used the web client',
         number: 1n << 39n,
         undocumented: true
     },
-    UNKNOWN_FLAG_40: {
+    USED_MOBILE_CLIENT: {
         description: 'User has used the mobile client',
         number: 1n << 40n,
         undocumented: true
@@ -117,7 +117,7 @@ const flags = {
         number: 1n << 41n,
         undocumented: true
     },
-    UNKNOWN_FLAG_43: {
+    VERIFIED_EMAIL: {
         description: 'User has a verified email',
         number: 1n << 43n,
         undocumented: true
