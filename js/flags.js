@@ -97,23 +97,23 @@ const flags = {
         number: 1n << 21n,
         undocumented: true
     },
-    UNKNOWN_FLAG_37: {
-        description: 'Unknown, but occurs with 39, 40, and 43.',
+    PREMIUM_DISCRIMINATOR: {
+        description: 'User has a premium discriminator',
         number: 1n << 37n,
         undocumented: true
     },
-    UNKNOWN_FLAG_38: {
-        description: 'Used to be <code>SELFBOT</code> but we don\'t know what this flag correlates to anymore.',
+    USED_DESKTOP_CLIENT: {
+        description: 'User has used the desktop client',
         number: 1n << 38n,
         undocumented: true
     },
-    UNKNOWN_FLAG_39: {
-        description: 'Unknown, occurs with 37.',
+    USED_WEB_CLIENT: {
+        description: 'User has used the web client',
         number: 1n << 39n,
         undocumented: true
     },
-    UNKNOWN_FLAG_40: {
-        description: 'Unknown, occurs with 37.',
+    USED_MOBILE_CLIENT: {
+        description: 'User has used the mobile client',
         number: 1n << 40n,
         undocumented: true
     },
@@ -122,8 +122,8 @@ const flags = {
         number: 1n << 41n,
         undocumented: true
     },
-    UNKNOWN_FLAG_43: {
-        description: 'Unknown, occurs with 37.',
+    VERIFIED_EMAIL: {
+        description: 'User has a verified email',
         number: 1n << 43n,
         undocumented: true
     }
