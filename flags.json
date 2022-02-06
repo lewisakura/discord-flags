@@ -104,6 +104,11 @@
         "shift": 20,
         "undocumented": true
     },
+    "DISABLE_PREMIUM": {
+       "description": "Forcefully disables Nitro features.",
+       "shift": 21,
+       "undocumented": true
+    },
     "PREMIUM_DISCRIMINATOR": {
         "description": "User has a premium discriminator",
         "shift": 37,
