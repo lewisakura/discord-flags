@@ -93,7 +93,7 @@ const flags = {
         undocumented: true
     },
     DISABLE_PREMIUM: {
-        description: 'Unknown, possibly a flag for disabling Discord Nitro features.',
+        description: 'Forcefully disables Nitro features.',
         number: 1n << 21n,
         undocumented: true
     },
