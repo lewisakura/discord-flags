@@ -92,6 +92,11 @@ const flags = {
         number: 1n << 20n,
         undocumented: true
     },
+    DISABLE_PREMIUM: {
+        description: 'Forcefully disables Nitro features.',
+        number: 1n << 21n,
+        undocumented: true
+    },
     PREMIUM_DISCRIMINATOR: {
         description: 'User has a premium discriminator',
         number: 1n << 37n,
