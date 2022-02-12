@@ -6,20 +6,16 @@ let flags;
 function _checkFlags(flagNumber) {
     let results = [];
 
-    for (let i = 0n; i <= 64n; i++) {
-        const bitwise = 1n << i;
+    for (let i = 0; i <= 64; i++) {
+        const bitwise = 1n << BigInt(i);
 
         if (flagNumber & bitwise) {
-            const flag = _getKeyByValue(flags, bitwise) || `UNKNOWN_FLAG_${i}`;
+            const flag = Object.entries(flags).find(f => f[1].shift === i)?.[0] || `UNKNOWN_FLAG_${i}`;
             results.push(flag);
         }
     }
 
     return results.join(', ') || 'NONE';
-}
-
-function _getKeyByValue(object, value) {
-    return Object.keys(object).find(key => object[key].number === value);
 }
 
 function calculate(e) {
