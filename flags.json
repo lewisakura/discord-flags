@@ -138,5 +138,10 @@
         "description": "User has a verified email",
         "shift": 43,
         "undocumented": true
+    },
+    "QUARANTINED": {
+        "description": "User account is quarantined",
+        "shift": 44,
+        "undocumented": true
     }
 }
