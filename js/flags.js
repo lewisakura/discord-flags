@@ -102,7 +102,7 @@ fetch('/flags.json')
             seenFlags.push(shift);
         }
 
-        for (let i = 0; i <= flagsGoUpTo; i++) {
+        /*for (let i = 0; i <= flagsGoUpTo; i++) {
             if (seenFlags.includes(i)) continue;
 
             insertFlag(`UNKNOWN_FLAG_${i}`, {
@@ -113,7 +113,7 @@ fetch('/flags.json')
             });
 
             seenFlags.push(i);
-        }
+        }*/
 
         document.getElementById('flagForm').addEventListener('submit', calculate);
         document.getElementById('loading').style.display = 'none';
