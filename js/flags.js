@@ -71,7 +71,7 @@ fetch('/flags.json')
             const shift = flags[flag].shift;
 
             // if a flag is missing...
-            if (shift > 0 && !seenFlags.includes(shift - 1)) {
+            /*if (shift > 0 && !seenFlags.includes(shift - 1)) {
                 // loop over until we hit a seen flag
                 let missingFlagStart = shift;
                 do {
@@ -90,7 +90,7 @@ fetch('/flags.json')
 
                     seenFlags.push(i);
                 }
-            }
+            }*/
 
             insertFlag(flag, {
                 description: flags[flag].description,
