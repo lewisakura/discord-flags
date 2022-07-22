@@ -109,6 +109,11 @@
        "shift": 21,
        "undocumented": true
     },
+    "APPLICATION_COMMAND_BADGE": {
+       "description": "Indicates if an app has registered global application commands.",
+       "shift": 23,
+       "undocumented": false
+    },
     "PREMIUM_DISCRIMINATOR": {
         "description": "User has a premium discriminator",
         "shift": 37,
