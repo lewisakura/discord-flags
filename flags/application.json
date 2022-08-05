@@ -1,4 +1,19 @@
 {
+  "EMBEDDED_RELEASED": {
+    "description": "Indicates if an embedded app is available to play.",
+    "shift": 1,
+    "undocumented": true
+  },
+  "MANAGED_EMOJI": {
+    "description": "Indicates if the app has the ability to create Twitch-style emojis.",
+    "shift": 2,
+    "undocumented": true
+  },
+  "GROUP_DM_CREATE": {
+    "description": "Indicates if the app has permission to create group DMs.",
+    "shift": 4,
+    "undocumented": true
+  },
   "GATEWAY_PRESENCE": {
     "description": "Intent required for bots in 100 or more servers to receive presence_update events.",
     "shift": 12,
