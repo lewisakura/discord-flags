@@ -1,0 +1,7 @@
+{
+    "APPLICATION_COMMAND_BADGE": {
+        "description": "Indicates if an app has registered global application commands.",
+        "shift": 23,
+        "undocumented": true
+    }
+}

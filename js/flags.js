@@ -1,9 +1,10 @@
 const misc =
     'This flag is currently not known but is potentially used. If you have information about this flag, submit your information at the bottom of the page!';
 
-let flags;
+let userFlags;
+let applicationFlags;
 
-function _checkFlags(flagNumber) {
+function _checkFlags(flags, flagNumber) {
     let results = [];
 
     for (let i = 0; i <= 64; i++) {
@@ -34,7 +35,10 @@ function calculate(e) {
         return;
     }
 
-    result.innerHTML = _checkFlags(flagNum);
+    result.innerHTML = `<b>User:</b> ${_checkFlags(userFlags, flagNum)}<br><b>Application:</b> ${_checkFlags(
+        applicationFlags,
+        flagNum
+    )}`;
 }
 
 const undocumented = `<span class="icon">
@@ -44,11 +48,10 @@ const undocumented = `<span class="icon">
     </span>
 </span>`;
 
-const table = document.getElementById('knownFlags').getElementsByTagName('tbody')[0];
-const flagsGoUpTo = 43;
-const seenFlags = [];
+const userTable = document.getElementById('userFlags').getElementsByTagName('tbody')[0];
+const applicationTable = document.getElementById('applicationFlags').getElementsByTagName('tbody')[0];
 
-function insertFlag(flag, flagData) {
+function insertFlag(flag, table, flagData) {
     const row = table.insertRow(-1);
     const flagName = row.insertCell(0);
     const flagValue = row.insertCell(1);
@@ -62,59 +65,45 @@ function insertFlag(flag, flagData) {
     flagDesc.innerHTML = flagData.description;
 }
 
-fetch('/flags.json')
+const users = fetch('/flags/user.json')
     .then(res => res.json())
     .then(f => {
-        flags = f;
+        userFlags = f;
 
-        for (const flag of Object.keys(flags)) {
-            const shift = flags[flag].shift;
+        for (const flag of Object.keys(userFlags)) {
+            const shift = userFlags[flag].shift;
 
-            // if a flag is missing...
-            /*if (shift > 0 && !seenFlags.includes(shift - 1)) {
-                // loop over until we hit a seen flag
-                let missingFlagStart = shift;
-                do {
-                    missingFlagStart--;
-                } while (!seenFlags.includes(missingFlagStart));
-                missingFlagStart++; // because the loop ends when we hit a seen flag
-
-                // now add all the missing flags with placeholder data
-                for (let i = missingFlagStart; i < shift; i++) {
-                    insertFlag(`UNKNOWN_FLAG_${i}`, {
-                        description: misc,
-                        bitshift: i,
-                        value: 1n << BigInt(i),
-                        undocumented: true
-                    });
-
-                    seenFlags.push(i);
-                }
-            }*/
-
-            insertFlag(flag, {
-                description: flags[flag].description,
+            insertFlag(flag, userTable, {
+                description: userFlags[flag].description,
                 bitshift: shift,
                 value: 1n << BigInt(shift),
-                undocumented: flags[flag].undocumented
+                undocumented: userFlags[flag].undocumented
             });
-
-            seenFlags.push(shift);
         }
 
-        /*for (let i = 0; i <= flagsGoUpTo; i++) {
-            if (seenFlags.includes(i)) continue;
-
-            insertFlag(`UNKNOWN_FLAG_${i}`, {
-                description: misc,
-                bitshift: i,
-                value: 1n << BigInt(i),
-                undocumented: true
-            });
-
-            seenFlags.push(i);
-        }*/
-
-        document.getElementById('flagForm').addEventListener('submit', calculate);
-        document.getElementById('loading').style.display = 'none';
+        document.getElementById('userLoading').style.display = 'none';
     });
+
+const apps = fetch('/flags/application.json')
+    .then(res => res.json())
+    .then(f => {
+        applicationFlags = f;
+
+        for (const flag of Object.keys(applicationFlags)) {
+            const shift = applicationFlags[flag].shift;
+
+            insertFlag(flag, applicationTable, {
+                description: applicationFlags[flag].description,
+                bitshift: shift,
+                value: 1n << BigInt(shift),
+                undocumented: applicationFlags[flag].undocumented
+            });
+        }
+
+        document.getElementById('applicationLoading').style.display = 'none';
+    });
+
+Promise.all([users, apps]).then(() => {
+    document.getElementById('flagForm').addEventListener('submit', calculate);
+    document.getElementById('flagFormSubmit').attributes.removeNamedItem('disabled');
+});

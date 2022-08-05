@@ -105,14 +105,9 @@
         "undocumented": true
     },
     "DISABLE_PREMIUM": {
-       "description": "Forcefully disables Nitro features.",
-       "shift": 21,
-       "undocumented": true
-    },
-    "APPLICATION_COMMAND_BADGE": {
-       "description": "Indicates if an app has registered global application commands.",
-       "shift": 23,
-       "undocumented": true
+        "description": "Forcefully disables Nitro features.",
+        "shift": 21,
+        "undocumented": true
     },
     "PREMIUM_DISCRIMINATOR": {
         "description": "User has a premium discriminator",
