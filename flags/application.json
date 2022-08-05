@@ -39,6 +39,11 @@
     "shift": 19,
     "undocumented": false
   },
+  "EMBEDDED_FIRST_PARTY": {
+    "description": "Indicates a first-party embedded app.",
+    "shift": 20,
+    "undocumented": true
+  },
   "APPLICATION_COMMAND_BADGE": {
     "description": "Indicates if an app has registered global application commands.",
     "shift": 23,
