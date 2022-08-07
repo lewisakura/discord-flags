@@ -1,7 +1,67 @@
 {
-    "APPLICATION_COMMAND_BADGE": {
-        "description": "Indicates if an app has registered global application commands.",
-        "shift": 23,
-        "undocumented": true
-    }
+  "EMBEDDED_RELEASED": {
+    "description": "Indicates if an embedded app is available to play.",
+    "shift": 1,
+    "undocumented": true
+  },
+  "MANAGED_EMOJI": {
+    "description": "Indicates if the app has the ability to create Twitch-style emojis.",
+    "shift": 2,
+    "undocumented": true
+  },
+  "GROUP_DM_CREATE": {
+    "description": "Indicates if the app has permission to create group DMs.",
+    "shift": 4,
+    "undocumented": true
+  },
+  "GATEWAY_PRESENCE": {
+    "description": "Intent required for bots in 100 or more servers to receive presence_update events.",
+    "shift": 12,
+    "undocumented": false
+  },
+  "GATEWAY_PRESENCE_LIMITED": {
+    "description": "Intent required for bots in under 100 servers to receive presence_update events.",
+    "shift": 13,
+    "undocumented": false
+  },
+  "GATEWAY_GUILD_MEMBERS": {
+    "description": "Intent required for bots in 100 or more servers to receive member-related events like guild_member_add.",
+    "shift": 14,
+    "undocumented": false
+  },
+  "GATEWAY_GUILD_MEMBERS_LIMITED": {
+    "description": "Intent required for bots in under 100 servers to receive member-related events like guild_member_add.",
+    "shift": 15,
+    "undocumented": false
+  },
+  "VERIFICATION_PENDING_GUILD_LIMIT": {
+    "description": "Indicates unusual growth of an app that prevents verification.",
+    "shift": 16,
+    "undocumented": false
+  },
+  "EMBEDDED": {
+    "description": "Indicates if an app is embedded within the Discord client.",
+    "shift": 17,
+    "undocumented": false
+  },
+  "GATEWAY_MESSAGE_CONTENT": {
+    "description": "Intent required for bots in 100 or more servers to receive message content.",
+    "shift": 18,
+    "undocumented": false
+  },
+  "GATEWAY_MESSAGE_CONTENT_LIMITED": {
+    "description": "Intent required for bots in under 100 servers to receive message content.",
+    "shift": 19,
+    "undocumented": false
+  },
+  "EMBEDDED_FIRST_PARTY": {
+    "description": "Indicates a first-party embedded app.",
+    "shift": 20,
+    "undocumented": true
+  },
+  "APPLICATION_COMMAND_BADGE": {
+    "description": "Indicates if an app has registered global application commands.",
+    "shift": 23,
+    "undocumented": true
+  }
 }
