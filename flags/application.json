@@ -15,22 +15,22 @@
     "undocumented": true
   },
   "RPC_PRIVATE_BETA": {
-    "description": "Application has access to the RPC HTTP server",
+    "description": "Allows the application to access to the RPC HTTP server",
     "shift": 5,
     "undocumented": true
   },
   "ALLOW_ASSETS": {
-    "description": "Whether the application can create RPC assets",
+    "description": "Allows the application to create RPC assets",
     "shift": 8,
     "undocumented": true
   },
   "ALLOW_ACTIVITY_ACTION_SPECTATE": {
-    "description": "Whether the application can allow users to spectate a game from RPC",
+    "description": "Allows the application to enable RPC activity spectating",
     "shift": 9,
     "undocumented": true
   },
   "ALLOW_ACTIVITY_ACTION_JOIN_REQUEST": {
-    "description": "Allows the application can allow users to request to join a user's game from RPC",
+    "description": "Allows the application to enable join requests for RPC activities",
     "shift": 10,
     "undocumented": true
   },
