@@ -14,6 +14,26 @@
     "shift": 4,
     "undocumented": true
   },
+  "RPC_PRIVATE_BETA": {
+    "description": "Application has access to the RPC HTTP server",
+    "shift": 5,
+    "undocumented": 5
+  },
+  "ALLOW_ASSETS": {
+    "description": "Relates to RPC application assets",
+    "shift": 8,
+    "undocumented": true
+  },
+  "ALLOW_ACTIVITY_ACTION_SPECTATE": {
+    "description": "Whether the application can allow users to spectate a game from RPC",
+    "shift": 9,
+    "undocumented": true
+  },
+  "ALLOW_ACTIVITY_ACTION_JOIN_REQUEST": {
+    "description": "Allows the application can allow users to request to join a user's game from RPC",
+    "shift": 10,
+    "undocumented": true
+  },
   "GATEWAY_PRESENCE": {
     "description": "Intent required for bots in 100 or more servers to receive presence_update events.",
     "shift": 12,
