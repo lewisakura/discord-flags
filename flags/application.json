@@ -15,7 +15,7 @@
     "undocumented": true
   },
   "RPC_PRIVATE_BETA": {
-    "description": "Allows the application to access the RPC server",
+    "description": "Allows the application to access the local RPC server",
     "shift": 5,
     "undocumented": true
   },
