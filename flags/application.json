@@ -15,7 +15,7 @@
     "undocumented": true
   },
   "RPC_PRIVATE_BETA": {
-    "description": "Allows the application to access the RPC HTTP server",
+    "description": "Allows the application to access the RPC server",
     "shift": 5,
     "undocumented": true
   },
