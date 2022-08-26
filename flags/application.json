@@ -20,7 +20,7 @@
     "undocumented": true
   },
   "ALLOW_ASSETS": {
-    "description": "Relates to RPC application assets",
+    "description": "Whether the application can create RPC assets",
     "shift": 8,
     "undocumented": true
   },
