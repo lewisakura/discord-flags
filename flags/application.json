@@ -17,7 +17,7 @@
   "RPC_PRIVATE_BETA": {
     "description": "Application has access to the RPC HTTP server",
     "shift": 5,
-    "undocumented": 5
+    "undocumented": true
   },
   "ALLOW_ASSETS": {
     "description": "Relates to RPC application assets",
