@@ -15,7 +15,7 @@
     "undocumented": true
   },
   "RPC_PRIVATE_BETA": {
-    "description": "Allows the application to access to the RPC HTTP server",
+    "description": "Allows the application to access the RPC HTTP server",
     "shift": 5,
     "undocumented": true
   },
@@ -25,12 +25,12 @@
     "undocumented": true
   },
   "ALLOW_ACTIVITY_ACTION_SPECTATE": {
-    "description": "Allows the application to enable RPC activity spectating",
+    "description": "Allows the application to enable activity spectating",
     "shift": 9,
     "undocumented": true
   },
   "ALLOW_ACTIVITY_ACTION_JOIN_REQUEST": {
-    "description": "Allows the application to enable join requests for RPC activities",
+    "description": "Allows the application to enable join requests for activities",
     "shift": 10,
     "undocumented": true
   },
