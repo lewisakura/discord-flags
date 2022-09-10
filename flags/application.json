@@ -15,23 +15,28 @@
     "undocumented": true
   },
   "RPC_PRIVATE_BETA": {
-    "description": "Allows the application to access the local RPC server",
+    "description": "Allows the application to access the local RPC server.",
     "shift": 5,
     "undocumented": true
   },
   "ALLOW_ASSETS": {
-    "description": "Allows the application to create activity assets",
+    "description": "Allows the application to create activity assets.",
     "shift": 8,
     "undocumented": true
   },
   "ALLOW_ACTIVITY_ACTION_SPECTATE": {
-    "description": "Allows the application to enable activity spectating",
+    "description": "Allows the application to enable activity spectating.",
     "shift": 9,
     "undocumented": true
   },
   "ALLOW_ACTIVITY_ACTION_JOIN_REQUEST": {
-    "description": "Allows the application to enable join requests for activities",
+    "description": "Allows the application to enable join requests for activities.",
     "shift": 10,
+    "undocumented": true
+  },
+  "RPC_HAS_CONNECTED": {
+    "description": "Indicates whether the application has accessed the local RPC server before.",
+    "shift": 11,
     "undocumented": true
   },
   "GATEWAY_PRESENCE": {
