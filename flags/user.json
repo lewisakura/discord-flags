@@ -112,7 +112,7 @@
     "ACTIVE_DEVELOPER": {
         "description": "User is an active developer. https://discord.com/developers/active-developer",
         "shift": 22,
-        "undocumented": true
+        "undocumented": false
     },
     "HIGH_GLOBAL_RATE_LIMIT": {
         "description": "Account has a high global ratelimit",
