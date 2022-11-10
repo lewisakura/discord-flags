@@ -88,5 +88,10 @@
     "description": "Indicates if an app has registered global application commands.",
     "shift": 23,
     "undocumented": false
+  },
+  "ACTIVE": {
+    "description": "Indicates if an app is considered active. This means that it has had any global command executed in the past 30 days.",
+    "shift": 24,
+    "undocumented": true
   }
 }
