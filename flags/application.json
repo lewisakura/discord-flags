@@ -89,9 +89,9 @@
     "shift": 23,
     "undocumented": false
   },
-  "ACTIVE": {
+  "ACTIVE_APPLICATION": {
     "description": "Indicates if an app is considered active. This means that it has had any global command executed in the past 30 days.",
     "shift": 24,
-    "undocumented": true
+    "undocumented": false
   }
 }
