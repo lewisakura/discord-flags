@@ -9,6 +9,11 @@
     "shift": 2,
     "undocumented": true
   },
+  "EMBEDDED_IAP": {
+    "description": "To be filled",
+    "shift": 3,
+    "undocumented": true
+  },
   "GROUP_DM_CREATE": {
     "description": "Indicates if the app has permission to create group DMs.",
     "shift": 4,
