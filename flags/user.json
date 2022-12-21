@@ -29,17 +29,17 @@
         "shift": 5,
         "undocumented": true
     },
-    "HOUSE_BRAVERY": {
+    "HYPESQUAD_ONLINE_HOUSE_1": {
         "description": "User is part of HypeSquad Bravery.",
         "shift": 6,
         "undocumented": false
     },
-    "HOUSE_BRILLIANCE": {
+    "HYPESQUAD_ONLINE_HOUSE_2": {
         "description": "User is part of HypeSquad Brilliance.",
         "shift": 7,
         "undocumented": false
     },
-    "HOUSE_BALANCE": {
+    "HYPESQUAD_ONLINE_HOUSE_3": {
         "description": "User is a part of HypeSquad Balance.",
         "shift": 8,
         "undocumented": false
