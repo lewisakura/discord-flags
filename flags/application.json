@@ -1,102 +1,102 @@
 {
-  "EMBEDDED_RELEASED": {
-    "description": "Indicates if an embedded app is available to play.",
-    "shift": 1,
-    "undocumented": true
-  },
-  "MANAGED_EMOJI": {
-    "description": "Indicates if the app has the ability to create Twitch-style emojis.",
-    "shift": 2,
-    "undocumented": true
-  },
-  "EMBEDDED_IAP": {
-    "description": "To be filled",
-    "shift": 3,
-    "undocumented": true
-  },
-  "GROUP_DM_CREATE": {
-    "description": "Indicates if the app has permission to create group DMs.",
-    "shift": 4,
-    "undocumented": true
-  },
-  "RPC_PRIVATE_BETA": {
-    "description": "Allows the application to access the local RPC server.",
-    "shift": 5,
-    "undocumented": true
-  },
-  "ALLOW_ASSETS": {
-    "description": "Allows the application to create activity assets.",
-    "shift": 8,
-    "undocumented": true
-  },
-  "ALLOW_ACTIVITY_ACTION_SPECTATE": {
-    "description": "Allows the application to enable activity spectating.",
-    "shift": 9,
-    "undocumented": true
-  },
-  "ALLOW_ACTIVITY_ACTION_JOIN_REQUEST": {
-    "description": "Allows the application to enable join requests for activities.",
-    "shift": 10,
-    "undocumented": true
-  },
-  "RPC_HAS_CONNECTED": {
-    "description": "Indicates whether the application has accessed the local RPC server before.",
-    "shift": 11,
-    "undocumented": true
-  },
-  "GATEWAY_PRESENCE": {
-    "description": "Intent required for bots in 100 or more servers to receive presence_update events.",
-    "shift": 12,
-    "undocumented": false
-  },
-  "GATEWAY_PRESENCE_LIMITED": {
-    "description": "Intent required for bots in under 100 servers to receive presence_update events.",
-    "shift": 13,
-    "undocumented": false
-  },
-  "GATEWAY_GUILD_MEMBERS": {
-    "description": "Intent required for bots in 100 or more servers to receive member-related events like guild_member_add.",
-    "shift": 14,
-    "undocumented": false
-  },
-  "GATEWAY_GUILD_MEMBERS_LIMITED": {
-    "description": "Intent required for bots in under 100 servers to receive member-related events like guild_member_add.",
-    "shift": 15,
-    "undocumented": false
-  },
-  "VERIFICATION_PENDING_GUILD_LIMIT": {
-    "description": "Indicates unusual growth of an app that prevents verification.",
-    "shift": 16,
-    "undocumented": false
-  },
-  "EMBEDDED": {
-    "description": "Indicates if an app is embedded within the Discord client.",
-    "shift": 17,
-    "undocumented": false
-  },
-  "GATEWAY_MESSAGE_CONTENT": {
-    "description": "Intent required for bots in 100 or more servers to receive message content.",
-    "shift": 18,
-    "undocumented": false
-  },
-  "GATEWAY_MESSAGE_CONTENT_LIMITED": {
-    "description": "Intent required for bots in under 100 servers to receive message content.",
-    "shift": 19,
-    "undocumented": false
-  },
-  "EMBEDDED_FIRST_PARTY": {
-    "description": "Indicates a first-party embedded app.",
-    "shift": 20,
-    "undocumented": true
-  },
-  "APPLICATION_COMMAND_BADGE": {
-    "description": "Indicates if an app has registered global application commands.",
-    "shift": 23,
-    "undocumented": false
-  },
-  "ACTIVE": {
-    "description": "Indicates if an app is considered active. This means that it has had any global command executed in the past 30 days.",
-    "shift": 24,
-    "undocumented": false
-  }
+    "EMBEDDED_RELEASED": {
+        "description": "Indicates if an embedded app is available to play.",
+        "shift": 1,
+        "undocumented": true
+    },
+    "MANAGED_EMOJI": {
+        "description": "Indicates if the app has the ability to create Twitch-style emojis.",
+        "shift": 2,
+        "undocumented": true
+    },
+    "EMBEDDED_IAP": {
+        "description": "To be filled",
+        "shift": 3,
+        "undocumented": true
+    },
+    "GROUP_DM_CREATE": {
+        "description": "Indicates if the app has permission to create group DMs.",
+        "shift": 4,
+        "undocumented": true
+    },
+    "RPC_PRIVATE_BETA": {
+        "description": "Allows the application to access the local RPC server.",
+        "shift": 5,
+        "undocumented": true
+    },
+    "ALLOW_ASSETS": {
+        "description": "Allows the application to create activity assets.",
+        "shift": 8,
+        "undocumented": true
+    },
+    "ALLOW_ACTIVITY_ACTION_SPECTATE": {
+        "description": "Allows the application to enable activity spectating.",
+        "shift": 9,
+        "undocumented": true
+    },
+    "ALLOW_ACTIVITY_ACTION_JOIN_REQUEST": {
+        "description": "Allows the application to enable join requests for activities.",
+        "shift": 10,
+        "undocumented": true
+    },
+    "RPC_HAS_CONNECTED": {
+        "description": "Indicates whether the application has accessed the local RPC server before.",
+        "shift": 11,
+        "undocumented": true
+    },
+    "GATEWAY_PRESENCE": {
+        "description": "Intent required for bots in 100 or more servers to receive presence_update events.",
+        "shift": 12,
+        "undocumented": false
+    },
+    "GATEWAY_PRESENCE_LIMITED": {
+        "description": "Intent required for bots in under 100 servers to receive presence_update events.",
+        "shift": 13,
+        "undocumented": false
+    },
+    "GATEWAY_GUILD_MEMBERS": {
+        "description": "Intent required for bots in 100 or more servers to receive member-related events like guild_member_add.",
+        "shift": 14,
+        "undocumented": false
+    },
+    "GATEWAY_GUILD_MEMBERS_LIMITED": {
+        "description": "Intent required for bots in under 100 servers to receive member-related events like guild_member_add.",
+        "shift": 15,
+        "undocumented": false
+    },
+    "VERIFICATION_PENDING_GUILD_LIMIT": {
+        "description": "Indicates unusual growth of an app that prevents verification.",
+        "shift": 16,
+        "undocumented": false
+    },
+    "EMBEDDED": {
+        "description": "Indicates if an app is embedded within the Discord client.",
+        "shift": 17,
+        "undocumented": false
+    },
+    "GATEWAY_MESSAGE_CONTENT": {
+        "description": "Intent required for bots in 100 or more servers to receive message content.",
+        "shift": 18,
+        "undocumented": false
+    },
+    "GATEWAY_MESSAGE_CONTENT_LIMITED": {
+        "description": "Intent required for bots in under 100 servers to receive message content.",
+        "shift": 19,
+        "undocumented": false
+    },
+    "EMBEDDED_FIRST_PARTY": {
+        "description": "Indicates a first-party embedded app.",
+        "shift": 20,
+        "undocumented": true
+    },
+    "APPLICATION_COMMAND_BADGE": {
+        "description": "Indicates if an app has registered global application commands.",
+        "shift": 23,
+        "undocumented": false
+    },
+    "ACTIVE": {
+        "description": "Indicates if an app is considered active. This means that it has had any global command executed in the past 30 days.",
+        "shift": 24,
+        "undocumented": false
+    }
 }

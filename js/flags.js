@@ -1,6 +1,3 @@
-const misc =
-    'This flag is currently not known but is potentially used. If you have information about this flag, submit your information at the bottom of the page!';
-
 let userFlags;
 let applicationFlags;
 
@@ -11,34 +8,35 @@ function _checkFlags(flags, flagNumber) {
         const bitwise = 1n << BigInt(i);
 
         if (flagNumber & bitwise) {
-            const flag = Object.entries(flags).find(f => f[1].shift === i)?.[0] || `UNKNOWN_FLAG_${i}`;
+            const flag =
+                Object.entries(flags).find((f) => f[1].shift === i)?.[0] || `UNKNOWN_FLAG_${i}`;
             results.push(flag);
         }
     }
 
-    return results.join(', ') || 'NONE';
+    return results.join(", ") || "NONE";
 }
 
 function calculate(e) {
     e.preventDefault();
 
-    const result = document.getElementById('result');
-    result.innerHTML = 'N/A';
+    const result = document.getElementById("result");
+    result.innerHTML = "N/A";
 
     let flagNum;
 
     try {
-        flagNum = BigInt(document.getElementById('flags').value);
+        flagNum = BigInt(document.getElementById("flags").value);
     } catch (e) {
-        result.innerHTML = 'Bad flag number';
+        result.innerHTML = "Bad flag number";
         console.warn(e);
         return;
     }
 
-    result.innerHTML = `<b>User:</b> ${_checkFlags(userFlags, flagNum)}<br><b>Application:</b> ${_checkFlags(
-        applicationFlags,
+    result.innerHTML = `<b>User:</b> ${_checkFlags(
+        userFlags,
         flagNum
-    )}`;
+    )}<br><b>Application:</b> ${_checkFlags(applicationFlags, flagNum)}`;
 }
 
 const undocumented = `<span class="icon">
@@ -48,8 +46,10 @@ const undocumented = `<span class="icon">
     </span>
 </span>`;
 
-const userTable = document.getElementById('userFlags').getElementsByTagName('tbody')[0];
-const applicationTable = document.getElementById('applicationFlags').getElementsByTagName('tbody')[0];
+const userTable = document.getElementById("userFlags").getElementsByTagName("tbody")[0];
+const applicationTable = document
+    .getElementById("applicationFlags")
+    .getElementsByTagName("tbody")[0];
 
 function insertFlag(flag, table, flagData) {
     const row = table.insertRow(-1);
@@ -65,9 +65,9 @@ function insertFlag(flag, table, flagData) {
     flagDesc.innerHTML = flagData.description;
 }
 
-const users = fetch('/flags/user.json')
-    .then(res => res.json())
-    .then(f => {
+const users = fetch("/flags/user.json")
+    .then((res) => res.json())
+    .then((f) => {
         userFlags = f;
 
         for (const flag of Object.keys(userFlags)) {
@@ -81,12 +81,12 @@ const users = fetch('/flags/user.json')
             });
         }
 
-        document.getElementById('userLoading').style.display = 'none';
+        document.getElementById("userLoading").style.display = "none";
     });
 
-const apps = fetch('/flags/application.json')
-    .then(res => res.json())
-    .then(f => {
+const apps = fetch("/flags/application.json")
+    .then((res) => res.json())
+    .then((f) => {
         applicationFlags = f;
 
         for (const flag of Object.keys(applicationFlags)) {
@@ -100,10 +100,10 @@ const apps = fetch('/flags/application.json')
             });
         }
 
-        document.getElementById('applicationLoading').style.display = 'none';
+        document.getElementById("applicationLoading").style.display = "none";
     });
 
 Promise.all([users, apps]).then(() => {
-    document.getElementById('flagForm').addEventListener('submit', calculate);
-    document.getElementById('flagFormSubmit').attributes.removeNamedItem('disabled');
+    document.getElementById("flagForm").addEventListener("submit", calculate);
+    document.getElementById("flagFormSubmit").attributes.removeNamedItem("disabled");
 });
