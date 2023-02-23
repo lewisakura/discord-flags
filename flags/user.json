@@ -168,5 +168,15 @@
         "description": "User account is quarantined.",
         "shift": 44,
         "undocumented": true
+    },
+    "COLLABORATOR": {
+        "description": "User is a collaborator and has staff permissions.",
+        "shift": 50
+        "undocumented": true
+    },
+    "RESTRICTED_COLLABORATOR": {
+        "description": "User is a restricted collaborator and has staff permissions.",
+        "shift": 51
+        "undocumented": true
     }
 }
