@@ -24,6 +24,11 @@
         "shift": 5,
         "undocumented": true
     },
+    "APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE": {
+        "description": "Powered by AutoMod.",
+        "shift": 6,
+        "undocumented": true
+    },
     "ALLOW_ASSETS": {
         "description": "Allows the application to create activity assets.",
         "shift": 8,
