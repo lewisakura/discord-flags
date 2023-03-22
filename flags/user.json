@@ -1,15 +1,15 @@
 {
-    "DISCORD_EMPLOYEE": {
+    "STAFF": {
         "description": "User is a Discord employee.",
         "shift": 0,
         "undocumented": false
     },
-    "DISCORD_PARTNER": {
+    "PARTNER": {
         "description": "User is a Discord partner.",
         "shift": 1,
         "undocumented": false
     },
-    "HYPESQUAD_EVENTS": {
+    "HYPESQUAD": {
         "description": "User is a HypeSquad Events member.",
         "shift": 2,
         "undocumented": false
@@ -44,7 +44,7 @@
         "shift": 8,
         "undocumented": false
     },
-    "EARLY_SUPPORTER": {
+    "PREMIUM_EARLY_SUPPORTER": {
         "description": "User is an Early Supporter.",
         "shift": 9,
         "undocumented": false
@@ -84,7 +84,7 @@
         "shift": 16,
         "undocumented": false
     },
-    "VERIFIED_BOT_DEVELOPER": {
+    "VERIFIED_DEVELOPER": {
         "description": "User is a verified bot developer.",
         "shift": 17,
         "undocumented": false
