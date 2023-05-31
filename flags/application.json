@@ -10,7 +10,7 @@
         "undocumented": true
     },
     "EMBEDDED_IAP": {
-        "description": "Indicates if the app has the ability to create in-app purchases.",
+        "description": "Indicates if an embedded app has the ability to create in-app purchases.",
         "shift": 3,
         "undocumented": true
     },
