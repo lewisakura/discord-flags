@@ -103,5 +103,10 @@
         "description": "Indicates if an app is considered active. This means that it has had any global command executed in the past 30 days.",
         "shift": 24,
         "undocumented": false
+    },    
+    "IFRAME_MODAL": {
+        "description": "Allows the application to use IFrame modals.",
+        "shift": 26,
+        "undocumented": true
     }
 }
