@@ -114,6 +114,11 @@
         "shift": 22,
         "undocumented": false
     },
+    "PROVISIONAL_ACCOUNT": {
+        "description": "Unknown.",
+        "shift": 23,
+        "undocumented": true
+    },
     "HIGH_GLOBAL_RATE_LIMIT": {
         "description": "Account has a high global ratelimit.",
         "shift": 33,
