@@ -34,11 +34,6 @@
         "shift": 8,
         "undocumented": true
     },
-    "ALLOW_ACTIVITY_ACTION_SPECTATE": {
-        "description": "Allows the application to enable activity spectating.",
-        "shift": 9,
-        "undocumented": true
-    },
     "GATEWAY_PRESENCE": {
         "description": "Intent required for bots in 100 or more servers to receive presence_update events.",
         "shift": 12,
