@@ -115,7 +115,7 @@
         "undocumented": false
     },
     "PROVISIONAL_ACCOUNT": {
-        "description": "Unknown.",
+        "description": "User is a provisional account used with the social layer integration.",
         "shift": 23,
         "undocumented": true
     },
