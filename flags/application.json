@@ -19,34 +19,24 @@
         "shift": 4,
         "undocumented": true
     },
-    "RPC_PRIVATE_BETA": {
-        "description": "Allows the application to access the local RPC server.",
-        "shift": 5,
-        "undocumented": true
-    },
     "APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE": {
-        "description": "Powered by AutoMod.",
+        "description": "Indicates if the app uses the Auto Moderation API. Indicates that the app has created at least 100 AutoMod rules.",
         "shift": 6,
+        "undocumented": false
+    },
+    "GAME_PROFILE_DISABLED": {
+        "description": "Indicates if the app has its game profile page disabled.",
+        "shift": 7,
         "undocumented": true
     },
-    "ALLOW_ASSETS": {
-        "description": "Allows the application to create activity assets.",
+    "PUBLIC_OAUTH2_CLIENT": {
+        "description": "Indicates if the app's OAuth2 credentials are public",
         "shift": 8,
         "undocumented": true
     },
     "ALLOW_ACTIVITY_ACTION_SPECTATE": {
         "description": "Allows the application to enable activity spectating.",
         "shift": 9,
-        "undocumented": true
-    },
-    "ALLOW_ACTIVITY_ACTION_JOIN_REQUEST": {
-        "description": "Allows the application to enable join requests for activities.",
-        "shift": 10,
-        "undocumented": true
-    },
-    "RPC_HAS_CONNECTED": {
-        "description": "Indicates whether the application has accessed the local RPC server before.",
-        "shift": 11,
         "undocumented": true
     },
     "GATEWAY_PRESENCE": {
@@ -107,6 +97,21 @@
     "IFRAME_MODAL": {
         "description": "Allows the application to use IFrame modals.",
         "shift": 26,
+        "undocumented": true
+    },    
+    "SOCIAL_LAYER_INTEGRATION": {
+        "description": "Indicates if an app can use the social layer integration.",
+        "shift": 27,
+        "undocumented": true
+    },    
+    "PROMOTED": {
+        "description": "Indicates if an app  is promoted by Discord in the application directory.",
+        "shift": 29,
+        "undocumented": true
+    },    
+    "PARTNER": {
+        "description": "Indicates if an app  is a Discord partner.",
+        "shift": 30,
         "undocumented": true
     }
 }
