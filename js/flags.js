@@ -106,7 +106,7 @@ const apps = fetch("/flags/application.json")
                 bitshift: shift,
                 value: 1n << BigInt(shift),
                 undocumented: applicationFlags[flag].undocumented,
-                deprecated: userFlags[flag]?.deprecated ?? false
+                deprecated: applicationFlags[flag]?.deprecated ?? false
             });
         }
 
