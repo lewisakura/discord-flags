@@ -46,6 +46,13 @@ const undocumented = `<span class="icon">
     </span>
 </span>`;
 
+const deprecated = `<span class="icon">
+    <span class="fa-stack" style="font-size: 8px;" data-tooltip="This flag is deprecated.">
+        <i class="fas fa-file fa-stack-2x"></i>
+        <i class="fas fa-times fa-stack-1x fa-inverse" style="color: red; padding-top: 2px;"></i>
+    </span>
+</span>`;
+
 const userTable = document.getElementById("userFlags").getElementsByTagName("tbody")[0];
 const applicationTable = document
     .getElementById("applicationFlags")
@@ -60,6 +67,7 @@ function insertFlag(flag, table, flagData) {
     flagName.innerHTML = flag;
 
     if (flagData.undocumented) flagName.innerHTML += undocumented;
+    if (flagData.deprecated) flagName.innerHTML += deprecated;
 
     flagValue.innerHTML = `${flagData.value} (1 << ${flagData.bitshift})`;
     flagDesc.innerHTML = flagData.description;
@@ -77,7 +85,8 @@ const users = fetch("/flags/user.json")
                 description: userFlags[flag].description,
                 bitshift: shift,
                 value: 1n << BigInt(shift),
-                undocumented: userFlags[flag].undocumented
+                undocumented: userFlags[flag].undocumented,
+                deprecated: userFlags[flag]?.deprecated ?? false
             });
         }
 
@@ -96,7 +105,8 @@ const apps = fetch("/flags/application.json")
                 description: applicationFlags[flag].description,
                 bitshift: shift,
                 value: 1n << BigInt(shift),
-                undocumented: applicationFlags[flag].undocumented
+                undocumented: applicationFlags[flag].undocumented,
+                deprecated: userFlags[flag]?.deprecated ?? false
             });
         }
 
