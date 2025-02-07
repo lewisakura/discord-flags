@@ -41,7 +41,7 @@
         "undocumented": true
     },
     "CONTEXTLESS_ACTIVITY": {
-        "description": "Currently unknown.",
+        "description": "This embedded application's activity can be launched without a context.",
         "shift": 9,
         "undocumented": true
     },
