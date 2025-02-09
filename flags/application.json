@@ -40,11 +40,10 @@
         "shift": 8,
         "undocumented": true
     },
-    "ALLOW_ACTIVITY_ACTION_SPECTATE": {
-        "description": "Allows the application to enable activity spectating.",
+    "CONTEXTLESS_ACTIVITY": {
+        "description": "This embedded application's activity can be launched without a context.",
         "shift": 9,
-        "undocumented": true,
-        "deprecated": true
+        "undocumented": true
     },
     "ALLOW_ACTIVITY_ACTION_JOIN_REQUEST": {
         "description": "Allows the application to enable join requests for activities.",
