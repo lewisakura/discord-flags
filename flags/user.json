@@ -164,8 +164,8 @@
         "shift": 41,
         "undocumented": true
     },
-    "VERIFIED_EMAIL": {
-        "description": "User has a verified email.",
+    "HAS_SESSION_STARTED": {
+        "description": "User has started at least one Gateway session and is now eligible to send messages.",
         "shift": 43,
         "undocumented": true
     },
