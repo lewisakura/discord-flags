@@ -55,7 +55,7 @@
         "undocumented": false
     },
     "HUBSPOT_CONTACT": {
-        "description": "User is registered on Discord's Hubspot customer platform, used for official Discord programs (e.g. partner)",
+        "description": "User is registered on Discord's Hubspot customer platform, used for official Discord programs (e.g. partner).",
         "shift": 11,
         "undocumented": true
     },
