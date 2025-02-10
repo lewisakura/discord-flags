@@ -54,8 +54,8 @@
         "shift": 10,
         "undocumented": false
     },
-    "INTERNAL_APPLICATION": {
-        "description": "An internal flag accidentally leaked to the client's private flags. Relates to partner/verification applications but nothing else is known.",
+    "HUBSPOT_CONTACT": {
+        "description": "User is registered on Discord's Hubspot customer platform, used for official Discord programs (e.g. partner)",
         "shift": 11,
         "undocumented": true
     },
