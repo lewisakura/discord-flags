@@ -102,6 +102,11 @@
         "shift": 20,
         "undocumented": true
     },
+    "APPLICATION_COMMAND_MIGRATED": {
+        "description": "Indicates if an app had it's slash commands migrated before (unknown)",
+        "shift": 21,
+        "undocumented": true
+    },
     "APPLICATION_COMMAND_BADGE": {
         "description": "Indicates if an app has registered global application commands.",
         "shift": 23,
@@ -111,22 +116,22 @@
         "description": "Indicates if an app is considered active. This means that it has had any global command executed in the past 30 days.",
         "shift": 24,
         "undocumented": false
-    },    
+    },
     "IFRAME_MODAL": {
         "description": "Allows the application to use IFrame modals.",
         "shift": 26,
         "undocumented": true
-    },    
+    },
     "SOCIAL_LAYER_INTEGRATION": {
         "description": "Indicates if an app can use the social layer integration.",
         "shift": 27,
         "undocumented": true
-    },    
+    },
     "PROMOTED": {
         "description": "Indicates if an app  is promoted by Discord in the application directory.",
         "shift": 29,
         "undocumented": true
-    },    
+    },
     "PARTNER": {
         "description": "Indicates if an app  is a Discord partner.",
         "shift": 30,

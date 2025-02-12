@@ -54,8 +54,8 @@
         "shift": 10,
         "undocumented": false
     },
-    "INTERNAL_APPLICATION": {
-        "description": "An internal flag accidentally leaked to the client's private flags. Relates to partner/verification applications but nothing else is known.",
+    "HUBSPOT_CONTACT": {
+        "description": "User is registered on Discord's Hubspot customer platform, used for official Discord programs (e.g. partner).",
         "shift": 11,
         "undocumented": true
     },
@@ -164,14 +164,19 @@
         "shift": 41,
         "undocumented": true
     },
-    "VERIFIED_EMAIL": {
-        "description": "User has a verified email.",
+    "HAS_SESSION_STARTED": {
+        "description": "User has started at least one Gateway session and is now eligible to send messages.",
         "shift": 43,
         "undocumented": true
     },
     "QUARANTINED": {
         "description": "User account is quarantined.",
         "shift": 44,
+        "undocumented": true
+    },
+    "PREMIUM_ELIGIBLE_FOR_UNIQUE_USERNAME": {
+        "description": "User is eligible for early access to pomelo migration.",
+        "shift": 47,
         "undocumented": true
     },
     "COLLABORATOR": {
