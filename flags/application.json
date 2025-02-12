@@ -120,7 +120,7 @@
     "ACTIVE_GRACE_PERIOD": {
         "description": "Unknown.",
         "shift": 25,
-        "undocumented": false
+        "undocumented": true
     },
     "IFRAME_MODAL": {
         "description": "Allows the application to use IFrame modals.",
