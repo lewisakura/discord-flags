@@ -54,15 +54,16 @@
         "shift": 10,
         "undocumented": false
     },
-    "INTERNAL_APPLICATION": {
-        "description": "An internal flag accidentally leaked to the client's private flags. Relates to partner/verification applications but nothing else is known.",
+    "HUBSPOT_CONTACT": {
+        "description": "User is registered on Discord's HubSpot customer platform, used for official Discord programs (e.g. partner).",
         "shift": 11,
         "undocumented": true
     },
     "SYSTEM": {
         "description": "Account is a Discord system account.",
         "shift": 12,
-        "undocumented": true
+        "undocumented": true,
+        "deprecated": true
     },
     "HAS_UNREAD_URGENT_MESSAGES": {
         "description": "User has unread messages from Discord.",
@@ -172,6 +173,11 @@
     "QUARANTINED": {
         "description": "User account is quarantined.",
         "shift": 44,
+        "undocumented": true
+    },
+    "PREMIUM_ELIGIBLE_FOR_UNIQUE_USERNAME": {
+        "description": "User is eligible for early access to pomelo migration.",
+        "shift": 47,
         "undocumented": true
     },
     "COLLABORATOR": {
