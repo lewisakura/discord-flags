@@ -118,7 +118,7 @@
         "undocumented": false
     },
     "ACTIVE_GRACE_PERIOD": {
-        "description": "Application has not had any global application commands used in the last 30 days and is at risk of losing the `ACTIVE` flag",
+        "description": "Application has not had any global application commands used in the last 30 days and has lost the `ACTIVE` flag",
         "shift": 25,
         "undocumented": true
     },
