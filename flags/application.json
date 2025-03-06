@@ -117,6 +117,11 @@
         "shift": 24,
         "undocumented": false
     },
+    "ACTIVE_GRACE_PERIOD": {
+        "description": "Application has not had any global application commands used in the last 30 days and has lost the `ACTIVE` flag",
+        "shift": 25,
+        "undocumented": true
+    },
     "IFRAME_MODAL": {
         "description": "Allows the application to use IFrame modals.",
         "shift": 26,
