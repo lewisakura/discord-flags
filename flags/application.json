@@ -45,11 +45,10 @@
         "shift": 9,
         "undocumented": true
     },
-    "ALLOW_ACTIVITY_ACTION_JOIN_REQUEST": {
-        "description": "Allows the application to enable join requests for activities.",
+    "SOCIAL_LAYER_INTEGRATION_LIMITED": {
+        "description": "Indicates whether the application has limited access to the social layer SDK.",
         "shift": 10,
-        "undocumented": true,
-        "deprecated": true
+        "undocumented": true
     },
     "RPC_HAS_CONNECTED": {
         "description": "Indicates whether the application has accessed the local RPC server before.",
